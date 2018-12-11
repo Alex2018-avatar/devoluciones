@@ -1,0 +1,46 @@
+.my_account.detail-box.change-info-dev#changeWindow-box-container
+  .box
+    span#close-w-oder-detail.close-detail.close &times;
+  .row.header-detail
+    h2 Productos disponibles para Cambio
+
+.top-info-dev
+  ul.main-detail
+    li
+      p.label Numero de pedido:
+      p.label Fecha del Pedido:
+    li
+      p#num-ped-detail.content
+      p#date-ped-detail.content
+.direccion-dev
+  .title-dev
+    h1 Direccion del envio
+  .content-address-dev
+    p#billing_address_id_dev
+    p#firstName_lastname_dev
+    p#addressLine_dev
+    p#city_dev
+    p#country_dev
+    p#phone_dev
+    p#email_dev
+.ped-detail-devolucion
+  .ped-detail-sec-title
+    .header-title
+      h3 Detalle del
+      h3 -Pedido
+  .row.tableHeader.fullView.items-oder-detail(role="row")
+    .col2.imagen-dev(role="columnheader")
+      .cell
+        span &nbsp;
+    .col2.product-detail-dev(role="columnheader")
+      .cell
+        span Producto
+    .col2.total_price(role="columnheader")
+      .cell
+        span Precio
+    .col2.actions(role="columnheader")
+      .cell
+        span Seleccionar
+  #tbTable-orders-items.fullView
+
+.two-Buttons.orderActions

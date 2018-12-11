@@ -1,0 +1,21 @@
+#OrderListPageHeading
+  h1 Mis Pedidos
+#Processed_OrderListTable_Widget(wctype="RefreshArea")
+  .listTable
+    .row.tableHeader.fullView(role="row")
+      .col2.order(role="columnheader")
+        .cell(row-expand="OrderList_ORDER_Arrow")
+          span Numero de Pedido
+      .col2.date(role="columnheader")
+        .cell(row-expand="OrderList_DATE_Arrow")
+          span Fecha de Pedido
+      .col2.peice(role="columnheader")
+        .cell(row-expand="OrderList_TOTAL_PRICE_Arrow")
+          span Monto
+      .col2.actions(role="columnheader")
+        .cell(row-expand="OrderList_ORDER_Arrow")
+          span Detalle
+      .col2.order(role="columnheader", title="Action")
+        .cell(row-expand="OrderList_ORDER_Arrow")
+          span
+    #tbTable-orders().fullView
