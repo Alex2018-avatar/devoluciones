@@ -17,5 +17,6 @@ const DOMController = require('../controllers/dom.controller');
 router.get('/leftnaview', DOMController.getDOMforLeftNavigation);
 router.get('/orderview', DOMController.getDOMforOrderList);
 router.get('/orderdetail', DOMController.getDOMforOrderDetail);
+router.get('/changeview', DOMController.getDOMforOrderChange);
 
 module.exports = router

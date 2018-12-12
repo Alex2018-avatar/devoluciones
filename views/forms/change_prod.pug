@@ -1,0 +1,79 @@
+#changeWindow-box-container.my_account.detail-box.change-info-dev
+  .box
+    span#close-w-oder-detail.close-detail.close &times;
+  .row.header-detail
+    h2 Productos disponibles para Cambio
+#listview-chage-dev.my_account.detail-bo.change-info-dev.list-table
+  .listTable.table-container-detail-items
+    .ped-detail-sec-title
+      .row.tableHeader.fullView.items-oder-detail(role="row")
+        .col2.imagen-dev(role="columnheader")
+          .cell
+            span &nbsp;
+        .col2.product-detail-dev(role="columnheader")
+          .cell
+            span Producto
+        .col2.total_price(role="columnheader")
+          .cell
+            span Precio
+      #change_table.fullView
+      //-.reason_cam
+        .title
+          h4 Razon de Cambio
+        .options-cam
+          select#reazon_cam_sel(name="")
+            option(value="1") No me agrada
+            option(value="2") No me alcanza
+      //-.sizes_available
+        .size_container#size_container_cam
+.forms_change
+  h3 Formas de Cambio
+  .form_change_1
+    .container
+      .title Atencion:
+      p El nuevo producto solamente será liberado para su envio una vez que nuestro Control de Calidad ha corroborado el buen estado del producto a cambiar.
+      p No efectuamos cambion por modelos diferentes ya que en muchos casos el valor del nuevo producto deseado no equivale al producto adquirido.
+      p En caso de que el producto sustituido no este disponible, realizaremos el reembolso del valor pagado sin consulta previa. Si enviamos un email informando esta situación.
+  .form_change_2
+    .container
+      .header_title
+        p.main_title Estimado cliente: Puede devolver su pedido a cualquier sucursal de Chilexpress o Correos de Chile
+        p Recuerde que los cambios y devoluciones no tienen costo de envio
+        ol
+          li Sucursales de Chilexpress.
+          li Sucursales de Correos Chile.
+          li Sucursales de .....
+.form_to_save
+  .row_item_prod
+    .title
+      h4 Direccion de Envio
+    form(action="", method="post")
+      .form-group
+        label(for="name_user") Nombre:
+        input#name_user(type="text", name="name_user")
+      .form-group
+        label(for="address_user") Direccion:
+        input#address_user(type="text", name="address_user")
+      .form-group
+        label(for="Comuna_user") Comuna:
+        input#Comuna_user(type="text", name="Comuna_user")
+      .form-group
+        label(for="region_user") Region:
+        input#region_user(type="text", name="region_user")
+      .form-group
+        label(for="cuntry_user") Pais:
+        input#cuntry_user(type="text", name="cuntry_user")
+      .form-group
+        label(for="phone_user") Telefono:
+        input#phone_user(type="text", name="phone_user")
+      .form-group
+        label(for="email_user") Correo:
+        input#email_user(type="text", name="email_user")
+      .form-group
+        label(for="phone_user") Courier
+        select#courier_cam(name="courier_cam")
+          option(value="0") Seleccione
+          option(value="1") Correos Chile
+          option(value="2") Chile Express. 
+      .form-buttons
+        input(type="submit" id="send_chang_mod" value="Continuar").btnPrimary

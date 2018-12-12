@@ -1,13 +1,19 @@
 'use strict';
 
 var express = require('express');
-const path = require('path');
+const path = require('path'); 
+const compression = require('compression');
+const bodyparser = require('body-parser');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const domRoutes = require('./routes/dom.routes');
+const changesRoutes = require('./routes/changes');
 
 module.exports.create = function (server, host, port, publicDir) {
   var app = express();
+  app.use(compression());
+  app.use(bodyparser.json());
+  app.use(bodyparser.urlencoded({ extended: false }));
   // view engine setup
   app.set('views', path.join(__dirname, 'views'));
   app.set('view engine', 'pug');
@@ -21,6 +27,7 @@ module.exports.create = function (server, host, port, publicDir) {
     next();
   });
   app.use('/', indexRouter);
-  app.use('/api', domRoutes);
+  app.use('/dom', domRoutes);
+  app.use('/api', changesRoutes);
   return app;
 };
