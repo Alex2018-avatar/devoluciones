@@ -104,18 +104,43 @@ const getDOMforOrderChange= async (req, res) => {
         })
       } else {
         res.status(200).send({ changeview: contents });
-        //res.render('./forms/order_list')
       }
-
     }
   } catch (error) {
     throw new Error('Request failure: ' + error.message)
   }
+}
 
+/**
+ * Function 
+ * @param {*} req 
+ * @param {*} res 
+ */
+const getDOMforOrderExchange = async(req, res) => {
+  try {
+    let filePath = 'views/html/exchange_form.html';
+    // Check that the file exists locally
+    if (!fs.existsSync(filePath)) {
+      res.status(404).send({ code: 'INTERNAL_ERROR', message: 'File doesn\'t exists', sugges: 'Please reload the page or contact support.' });
+      lib.createRWDOMOrderExchange();
+    } else {
+      var contents = await fs.readFileSync(filePath, 'utf8');
+      if (!contents) {
+        res.status(404).send({
+          code: 'REQUEST_ERROR', message: 'I can\'t complete the request'
+        });
+      } else {
+        res.status(200).send({ exchange: contents });
+      }
+    }
+  } catch (error) {
+    throw new Error('Request failure: ' + error.message)
+  }
 }
 module.exports = {
   getDOMforLeftNavigation,
   getDOMforOrderList,
   getDOMforOrderDetail,
-  getDOMforOrderChange
+  getDOMforOrderChange,
+  getDOMforOrderExchange
 };

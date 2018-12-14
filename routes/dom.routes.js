@@ -18,5 +18,5 @@ router.get('/leftnaview', DOMController.getDOMforLeftNavigation);
 router.get('/orderview', DOMController.getDOMforOrderList);
 router.get('/orderdetail', DOMController.getDOMforOrderDetail);
 router.get('/changeview', DOMController.getDOMforOrderChange);
-
+router.get('/exchangeview', DOMController.getDOMforOrderExchange);
 module.exports = router
