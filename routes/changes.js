@@ -7,7 +7,7 @@ const router = express.Router();
 
 /** Calling controllers */
 // Ratings controllers
-const ChangeController = require('../controllers/changes.controller');
+const ChangexchangesviewController = require('../controllers/changes.controller');
 
 
 /**
@@ -18,7 +18,11 @@ const ChangeController = require('../controllers/changes.controller');
  * - download/byDomain          => GET : download attributes file in scv format                   
  */
 
-router.get('/changesview', ChangeController.getChanges);
-router.post('/changes', ChangeController.insertChange);
-router.post('/demo', ChangeController.demo);
+router.get('/changexchangesview', ChangexchangesviewController.getChangexchanges);
+router.post('/changexchange', ChangexchangesviewController.insertChangexchanges);
+router.get('/changexchangesview/byId/:changeId', ChangexchangesviewController.getChangexchangesById);
+router.get('/changexchangesview/byRut/:rut', ChangexchangesviewController.getChangexchangesByRut);
+router.get('/changexchangesview/byDate/:date', ChangexchangesviewController.getChangexchangeByDate);
+router.get('/changexchangesview/byDateRange/:startDate/:endDate', ChangexchangesviewController.getChangexchangeByRangeDate);
+router.get('/changexchangesview/byModule/:module', ChangexchangesviewController.getChangexchangeByModule);
 module.exports = router;

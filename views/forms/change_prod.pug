@@ -1,6 +1,6 @@
 #changeWindow-box-container.my_account.detail-box.change-info-dev
   .box
-    span#close-w-oder-detail.close-detail.close &times;
+    span#close-w-change-window.close-detail.close &times;
   .row.header-detail
     h2 Productos disponibles para Cambio
 #listview-chage-dev.my_account.detail-bo.change-info-dev.list-table
@@ -52,7 +52,7 @@
         label(for="name_user") Nombre:
         input#name_user(type="text", name="name_user")
       .form-group
-        label(for="address_user") Direccion:
+        label(for="address_user") Dirección:
         input#address_user(type="text", name="address_user")
       .form-group
         label(for="Comuna_user") Comuna:
@@ -61,10 +61,10 @@
         label(for="region_user") Region:
         input#region_user(type="text", name="region_user")
       .form-group
-        label(for="cuntry_user") Pais:
-        input#cuntry_user(type="text", name="cuntry_user")
+        label(for="cuntry_user") País:
+        input#cuntry_user(type="text", name="cuntry_user", disabled="disabled")
       .form-group
-        label(for="phone_user") Telefono:
+        label(for="phone_user") Teléfono:
         input#phone_user(type="text", name="phone_user")
       .form-group
         label(for="email_user") Correo:
@@ -72,8 +72,7 @@
       .form-group
         label(for="phone_user") Courier
         select#courier_cam(name="courier_cam")
-          option(value="0") Seleccione
           option(value="1") Correos Chile
-          option(value="2") Chile Express. 
+          option(value="2") Chile Express 
       .form-buttons
         input(type="submit" id="send_chang_mod" value="Continuar").btnPrimary
